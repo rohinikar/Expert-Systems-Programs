@@ -1,0 +1,176 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/Project_PART2_67308301/Dataset_Other_Part1.CLP")
+Defining deftemplate: package
+Defining deftemplate: truck
+Defining deftemplate: Number-of-Packages-Delivered
+Defining deftemplate: Number-of-Trucks-at-Orlando
+Defining deftemplate: Total-Wait-Time
+Defining deftemplate: edge
+Defining deftemplate: cheapest_paths
+Defining deftemplate: path
+Defining deffacts: P-A-U-delivery-service
+Defining deffacts: counter-1
+Defining deffacts: Truck-Counter
+Defining deffacts: Package-wait-time-Counter
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/Project_PART2_67308301/Part1_Other.clp")
+Defining defrule: update-time-1 +j+j+j
+Defining defrule: update-time-2 =j=j=j+j+j
+Defining defrule: update-time-3 =j+j+j+j
+Defining defrule: find-shortest-path =j+j
+Defining defrule: initial_path +j
+Defining defrule: extended_path +j+j
+Defining defrule: result =j+j+j
+Defining defrule: result1 +j
+Defining defrule: situation-1-arriving-order-has-required-truck-in-Orlando =j+j+j+j+j+j+j
+Defining defrule: situation-2-arriving-package-assigned-to-truck =j+j+j+j
+Defining defrule: situation-3-package-delivered-to-destination =j+j+j+j+j+j+j
+Defining defrule: situation-4-Truck-back-to-Orlando =j+j+j+j
+Defining defrule: Truck_Report_Header +j+j
+Defining defrule: Individual-Truck-Statistics-1 =j=j+j+j+j+j
+Defining defrule: Individual-Truck-Statistics-2 =j=j=j=j+j+j
+Defining defrule: Report-Header-for-Package =j+j
+Defining defrule: Package_updates =j+j+j
+Defining defrule: Report-for-Package =j+j+j+j+j+j+j
+Defining defrule: Average-Report-for-All-Packages +j+j+j+j+j+j+j+j
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+TRUCK   1 has been DISPATCHED to pick PACKAGE  1 at TIME =  1
+PACKAGE  1 has been ASSIGNED to TRUCK  1 at TIME = 1
+PACKAGE 1 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 4
+TRUCK   2 has been DISPATCHED to pick PACKAGE  2 at TIME =  4
+PACKAGE  2 has been ASSIGNED to TRUCK  2 at TIME = 5
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 7
+PACKAGE 2 has been DELIVERED at DESTINATION by TRUCK 2 at TIME = 8
+TRUCK   1 has been DISPATCHED to pick PACKAGE  3 at TIME =  8
+TRUCK    2 RETURNS back to base ORLANDO at TIME = 10
+PACKAGE  3 has been ASSIGNED to TRUCK  1 at TIME = 16
+PACKAGE 3 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 19
+TRUCK   2 has been DISPATCHED to pick PACKAGE  4 at TIME =  20
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 24
+PACKAGE  4 has been ASSIGNED to TRUCK  2 at TIME = 25
+PACKAGE 4 has been DELIVERED at DESTINATION by TRUCK 2 at TIME = 30
+TRUCK    2 RETURNS back to base ORLANDO at TIME = 30
+TRUCK   1 has been DISPATCHED to pick PACKAGE  5 at TIME =  30
+PACKAGE  5 has been ASSIGNED to TRUCK  1 at TIME = 31
+PACKAGE 5 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 32
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 32
+TRUCK   1 has been DISPATCHED to pick PACKAGE  6 at TIME =  40
+PACKAGE  6 has been ASSIGNED to TRUCK  1 at TIME = 40
+PACKAGE 6 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 43
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 46
+TRUCK   1 has been DISPATCHED to pick PACKAGE  7 at TIME =  65
+PACKAGE  7 has been ASSIGNED to TRUCK  1 at TIME = 68
+PACKAGE 7 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 71
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 76
+TRUCK   1 has been DISPATCHED to pick PACKAGE  8 at TIME =  80
+PACKAGE  8 has been ASSIGNED to TRUCK  1 at TIME = 85
+PACKAGE 8 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 88
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 90
+TRUCK   1 has been DISPATCHED to pick PACKAGE  9 at TIME =  90
+PACKAGE  9 has been ASSIGNED to TRUCK  1 at TIME = 92
+PACKAGE 9 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 96
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 101
+TRUCK   1 has been DISPATCHED to pick PACKAGE  11 at TIME =  110
+TRUCK   2 has been DISPATCHED to pick PACKAGE  10 at TIME =  110
+PACKAGE  11 has been ASSIGNED to TRUCK  1 at TIME = 111
+PACKAGE  10 has been ASSIGNED to TRUCK  2 at TIME = 113
+PACKAGE 11 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 115
+PACKAGE 10 has been DELIVERED at DESTINATION by TRUCK 2 at TIME = 116
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 118
+TRUCK    2 RETURNS back to base ORLANDO at TIME = 119
+TRUCK   1 has been DISPATCHED to pick PACKAGE  12 at TIME =  120
+PACKAGE  12 has been ASSIGNED to TRUCK  1 at TIME = 123
+PACKAGE 12 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 132
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 140
+TRUCK   1 has been DISPATCHED to pick PACKAGE  15 at TIME =  150
+TRUCK   2 has been DISPATCHED to pick PACKAGE  14 at TIME =  150
+TRUCK   3 has been DISPATCHED to pick PACKAGE  13 at TIME =  150
+PACKAGE  13 has been ASSIGNED to TRUCK  3 at TIME = 155
+PACKAGE  14 has been ASSIGNED to TRUCK  2 at TIME = 155
+PACKAGE  15 has been ASSIGNED to TRUCK  1 at TIME = 155
+PACKAGE 14 has been DELIVERED at DESTINATION by TRUCK 2 at TIME = 161
+PACKAGE 13 has been DELIVERED at DESTINATION by TRUCK 3 at TIME = 161
+TRUCK    3 RETURNS back to base ORLANDO at TIME = 162
+TRUCK    2 RETURNS back to base ORLANDO at TIME = 163
+PACKAGE 15 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 164
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 169
+TRUCK   1 has been DISPATCHED to pick PACKAGE  16 at TIME =  200
+PACKAGE  16 has been ASSIGNED to TRUCK  1 at TIME = 205
+PACKAGE 16 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 207
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 210
+TRUCK   1 has been DISPATCHED to pick PACKAGE  17 at TIME =  220
+PACKAGE  17 has been ASSIGNED to TRUCK  1 at TIME = 223
+PACKAGE 17 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 225
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 230
+TRUCK   1 has been DISPATCHED to pick PACKAGE  18 at TIME =  240
+PACKAGE  18 has been ASSIGNED to TRUCK  1 at TIME = 245
+TRUCK   2 has been DISPATCHED to pick PACKAGE  20 at TIME =  250
+TRUCK   4 has been DISPATCHED to pick PACKAGE  19 at TIME =  250
+PACKAGE  20 has been ASSIGNED to TRUCK  2 at TIME = 251
+PACKAGE  19 has been ASSIGNED to TRUCK  4 at TIME = 252
+PACKAGE 19 has been DELIVERED at DESTINATION by TRUCK 4 at TIME = 253
+PACKAGE 20 has been DELIVERED at DESTINATION by TRUCK 2 at TIME = 255
+TRUCK    4 RETURNS back to base ORLANDO at TIME = 255
+PACKAGE 18 has been DELIVERED at DESTINATION by TRUCK 1 at TIME = 257
+TRUCK    2 RETURNS back to base ORLANDO at TIME = 258
+TRUCK    1 RETURNS back to base ORLANDO at TIME = 265
+
+
+
+
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ 
+ |                                                 INDIVIDUAL TRUCK REPORT                                                                                        | 
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ 
+ Truck#  |	Wait Time | Total time busy |   Time Busy (%)  |   #Package-at-end  | Occupancy | Non Delivery Travel Time	 | Busy time delivering(%)	| 
+ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ 
+    1       111            154               58.11               0                     1.00                96                          37.66               
+    2       219            46                17.36               0                     1.00                25                          45.65               
+    3       253            12                4.53                0                     1.00                6                           50.00               
+    4       260            5                 1.89                0                     1.00                4                           20.00               
+    5       265            0                 0.00                0                     0.00                0                           0.00                
+    6       265            0                 0.00                0                     0.00                0                           0.00                
+
+
+
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ |                                         REPORT OF INDIVIDUAL PACKAGES                                                                       | 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+   Package#  | Total-Wait-Time | 		Pick-Up-Time		 | 		Delivery-Time 		| 		 Status-at-Delivery   | Delivery Delayed By |
+ ---------------------------------------------------------------------------------------------------------------------------------------------- 
+    1              0                 		1                   		4                   		ON-TIME             		0           		
+    2              1                 		5                   		8                   		ON-TIME             		0           		
+    3              8                 		16                  		19                  		ON-TIME             		0           		
+    4              5                 		25                  		30                  		ON-TIME             		0           		
+    5              1                 		31                  		32                  		ON-TIME             		0           		
+    6              0                 		40                  		43                  		ON-TIME             		0           		
+    7              3                 		68                  		71                  		ON-TIME             		0           		
+    8              5                 		85                  		88                  		ON-TIME             		0           		
+    9              2                 		92                  		96                  		ON-TIME             		0           		
+    10             3                 		113                 		116                 		ON-TIME             		0           		
+    11             1                 		111                 		115                 		ON-TIME             		0           		
+    12             3                 		123                 		132                 		ON-TIME             		0           		
+    13             5                 		155                 		161                 		LATE                		6           		
+    14             5                 		155                 		161                 		LATE                		1           		
+    15             5                 		155                 		164                 		ON-TIME             		0           		
+    16             5                 		205                 		207                 		ON-TIME             		0           		
+    17             3                 		223                 		225                 		ON-TIME             		0           		
+    18             5                 		245                 		257                 		ON-TIME             		0           		
+    19             2                 		252                 		253                 		ON-TIME             		0           		
+    20             1                 		251                 		255                 		ON-TIME             		0           		
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         Average-Report-for-Packages    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2. # Packages which have been delivered ON-TIME 	:		18                   
+ 3. # Packages which have been delivered LATE 		:		2                   	
+ 1. AVERAGE WAIT TIME FOR PACKAGES 			:		3.15                
+ 4. AVERAGE lateness for LATE packages		:		3.50                	
+ 5. AVERAGE lateness for ALL packages 		:		0.35                	
+CLIPS> (dribble-off)

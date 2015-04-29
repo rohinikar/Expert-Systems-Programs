@@ -1,0 +1,54 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/UFL_Spring_2014/Expert_Systems/Homeworks/HW7/HW7.CLP")
+Defining defrule: rule-1 +j
+Defining defrule: rule-2 +j+j+j+j+j+j+j
+Defining defrule: rule-3 +j+j+j
+Defining defrule: rule-4 +j
+Defining defrule: rule-5 +j+j
+TRUE
+CLIPS> (reset)
+==> f-0     (initial-fact)
+CLIPS> (run)
+FIRE    1 rule-1: f-0
+Enter the value of n:
+3
+Enter the value of m:
+2
+==> f-1     (user1 3)
+==> f-2     (user2 2)
+==> f-3     (data 2)
+==> f-4     (data zero 1)
+==> f-5     (data one 4)
+==> f-6     (result2 4)
+==> f-7     (result 0)
+FIRE    2 rule-2: f-1,f-2,f-3,f-4,f-5,f-6,f-7
+<== f-3     (data 2)
+<== f-4     (data zero 1)
+<== f-5     (data one 4)
+<== f-7     (result 0)
+==> f-8     (result 14)
+==> f-9     (data zero 4)
+==> f-10    (data one 14)
+==> f-11    (data 3)
+FIRE    3 rule-2: f-1,f-2,f-11,f-9,f-10,f-6,f-8
+<== f-11    (data 3)
+<== f-9     (data zero 4)
+<== f-10    (data one 14)
+<== f-8     (result 14)
+==> f-12    (result 40)
+==> f-13    (data zero 14)
+==> f-14    (data one 40)
+==> f-15    (data 4)
+FIRE    4 rule-3: f-1,f-15,f-12
+The Result is: 40
+CLIPS> (facts)
+f-0     (initial-fact)
+f-1     (user1 3)
+f-2     (user2 2)
+f-6     (result2 4)
+f-12    (result 40)
+f-13    (data zero 14)
+f-14    (data one 40)
+f-15    (data 4)
+For a total of 8 facts.
+CLIPS> (dribble-off)

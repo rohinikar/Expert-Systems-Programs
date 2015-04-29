@@ -1,0 +1,58 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/UFL_Spring_2014/Expert_Systems/Homeworks/HW6/HW6.CLP")
+Defining defrule: rule-1 +j
+Defining defrule: rule-2 +j+j+j+j+j
+Defining defrule: rule-3 +j+j+j
+Defining defrule: rule-4 +j
+Defining defrule: rule-5 +j
+TRUE
+CLIPS> (run)
+CLIPS> (reset)
+==> f-0     (initial-fact)
+CLIPS> (run)
+FIRE    1 rule-1: f-0
+Enter the value of n:
+5
+==> f-1     (user 5)
+==> f-2     (data 2)
+==> f-3     (data one 0)
+==> f-4     (data two 1)
+==> f-5     (result 0)
+FIRE    2 rule-2: f-1,f-2,f-3,f-4,f-5
+<== f-2     (data 2)
+<== f-3     (data one 0)
+<== f-4     (data two 1)
+<== f-5     (result 0)
+==> f-6     (result 1)
+==> f-7     (data one 1)
+==> f-8     (data two 1)
+==> f-9     (data 3)
+FIRE    3 rule-2: f-1,f-9,f-7,f-8,f-6
+<== f-9     (data 3)
+<== f-7     (data one 1)
+<== f-8     (data two 1)
+<== f-6     (result 1)
+==> f-10    (result 2)
+==> f-11    (data one 1)
+==> f-12    (data two 2)
+==> f-13    (data 4)
+FIRE    4 rule-2: f-1,f-13,f-11,f-12,f-10
+<== f-13    (data 4)
+<== f-11    (data one 1)
+<== f-12    (data two 2)
+<== f-10    (result 2)
+==> f-14    (result 3)
+==> f-15    (data one 2)
+==> f-16    (data two 3)
+==> f-17    (data 5)
+FIRE    5 rule-3: f-1,f-17,f-14
+The Fibonacci number is: 3
+CLIPS> (facts)
+f-0     (initial-fact)
+f-1     (user 5)
+f-14    (result 3)
+f-15    (data one 2)
+f-16    (data two 3)
+f-17    (data 5)
+For a total of 6 facts.
+CLIPS> (dribble-off)

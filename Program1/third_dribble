@@ -1,0 +1,43 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/UFL_Spring_2014/Expert_Systems/Homeworks/HW3/third.CLP")
+Defining deffacts: third
+Defining defrule: rule-1 +j
+Defining defrule: rule-2 +j
+Defining defrule: rule-3 +j
+Defining defrule: rule-4 +j+j
+Defining defrule: rule-5 +j+j
+Defining defrule: rule-6 =j+j+j+j
+Defining defrule: rule-7 =j+j
+Defining defrule: rule-8 =j+j
+Defining defrule: rule-9 +j+j+j
+Defining defrule: rule-10 =j=j+j
+Defining defrule: rule-11 +j+j+j+j+j
+Defining defrule: rule-12 =j+j+j
+Defining defrule: rule-13 +j+j+j+j+j
+Defining defrule: rule-14 =j+j+j
+Defining defrule: rule-15 =j+j
+TRUE
+CLIPS> (reset)
+==> f-0     (initial-fact)
+==> f-1     (has hoofs)
+==> f-2     (does give milk)
+==> f-3     (has white color)
+==> f-4     (has black stripes)
+CLIPS> (run)
+FIRE    1 rule-2: f-2
+==> f-5     (is-a mammal)
+FIRE    2 rule-7: f-5,f-1
+==> f-6     (is-a ungulate)
+FIRE    3 rule-12: f-6,f-3,f-4
+==> f-7     (is-a zebra)
+CLIPS> (facts)
+f-0     (initial-fact)
+f-1     (has hoofs)
+f-2     (does give milk)
+f-3     (has white color)
+f-4     (has black stripes)
+f-5     (is-a mammal)
+f-6     (is-a ungulate)
+f-7     (is-a zebra)
+For a total of 8 facts.
+CLIPS> (dribble-off)

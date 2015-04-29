@@ -1,0 +1,64 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/UFL_Spring_2014/Expert_Systems/Homeworks/HW4/HW4_NOsalience_67308301.CLP")
+Defining deffacts: sets
+Defining defrule: intersection +j+j+j
+Defining defrule: disassemble +j
+Defining defrule: reassemble +j+j
+TRUE
+CLIPS> (reset)
+==> f-0     (initial-fact)
+==> f-1     (set x 1 2 3)
+==> f-2     (set y 4 2 1)
+==> f-3     (find-intersection x y)
+==> f-4     (set intersection)
+CLIPS> (run)
+FIRE    1 disassemble: f-2
+<== f-2     (set y 4 2 1)
+==> f-5     (set y 2 1)
+==> f-6     (element y 4)
+FIRE    2 disassemble: f-5
+<== f-5     (set y 2 1)
+==> f-7     (set y 1)
+==> f-8     (element y 2)
+FIRE    3 disassemble: f-7
+<== f-7     (set y 1)
+==> f-9     (set y)
+==> f-10    (element y 1)
+FIRE    4 disassemble: f-1
+<== f-1     (set x 1 2 3)
+==> f-11    (set x 2 3)
+==> f-12    (element x 1)
+FIRE    5 intersection: f-3,f-12,f-10
+<== f-12    (element x 1)
+<== f-10    (element y 1)
+==> f-13    (element intersection 1)
+FIRE    6 reassemble: f-13,f-4
+<== f-13    (element intersection 1)
+<== f-4     (set intersection)
+==> f-14    (set intersection 1)
+FIRE    7 disassemble: f-11
+<== f-11    (set x 2 3)
+==> f-15    (set x 3)
+==> f-16    (element x 2)
+FIRE    8 intersection: f-3,f-16,f-8
+<== f-16    (element x 2)
+<== f-8     (element y 2)
+==> f-17    (element intersection 2)
+FIRE    9 reassemble: f-17,f-14
+<== f-17    (element intersection 2)
+<== f-14    (set intersection 1)
+==> f-18    (set intersection 2 1)
+FIRE   10 disassemble: f-15
+<== f-15    (set x 3)
+==> f-19    (set x)
+==> f-20    (element x 3)
+CLIPS> (facts)
+f-0     (initial-fact)
+f-3     (find-intersection x y)
+f-6     (element y 4)
+f-9     (set y)
+f-18    (set intersection 2 1)
+f-19    (set x)
+f-20    (element x 3)
+For a total of 7 facts.
+CLIPS> (dribble-off)

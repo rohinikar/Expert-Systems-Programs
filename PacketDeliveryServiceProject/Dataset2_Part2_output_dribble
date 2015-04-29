@@ -1,0 +1,297 @@
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/Project_PART2_67308301/Dataset2_Part2.CLP")
+Defining deftemplate: truck
+Defining deftemplate: package
+Defining deftemplate: cheapest_paths
+Defining deftemplate: route
+Defining deftemplate: AVG_PACKAGE_REPORT
+Defining deftemplate: All-Package-WaitTime-Counter
+Defining deftemplate: Late-Package-Counter
+Defining defglobal: packages
+Defining defglobal: trucks
+Defining deffacts: P-A-U-Delivery-Service
+Defining deffacts: cheapest_paths
+Defining deffacts: data
+Defining deffacts: AVERAGE_REPORT
+Defining deffacts: Package-wait-time-Counter
+TRUE
+CLIPS> (load "C:/Users/Rohini/Desktop/Project_PART2_67308301/PART_2_CODE.CLP")
+Defining defrule: update-time-1 +j+j+j+j
+Defining defrule: update-time-3 =j+j+j+j
+Defining defrule: find-shortest-path +j
+Defining defrule: find-shortest-path-2 =j+j+j+j+j
+Defining defrule: find-shortest-path-1 +j+j+j
+Defining defrule: find-shortest-path-3 =j=j=j=j+j+j
+Defining defrule: situation-1-empty-truck-at-location-and-time-of-arriving-package =j+j+j+j+j+j
+Defining defrule: situation-1a-empty-truck-at-location-and-time-of-arriving-package =j=j=j=j+j+j
+Defining defrule: situation-2-nonempty-truck-at-location-of-arriving-package =j+j+j+j+j+j
+Defining defrule: situation-2a-nonempty-truck-at-location-of-arriving-package =j=j=j=j+j+j
+Defining defrule: situation-3a-no-truck-at-location-of-arriving-package =j+j+j+j+j+j+j+j+j+j+j
+Defining defrule: situation-3b-truck-arrived-to-pick-package +j+j+j+j
+Defining defrule: situation-3c-truck-arrived-to-pick-package =j=j+j+j
+Defining defrule: update-route =j+j+j+j+j+j+j
+Defining defrule: update-route-queue =j=j+j+j+j+j+j+j+j+j
+Defining defrule: update-route-1-queue =j+j+j+j+j+j+j+j+j
+Defining defrule: situation-4-last-package-delivered-at-destination-1 =j+j+j+j+j+j+j
+Defining defrule: situation-4a-non-last-package-delivered-at-destination =j=j+j+j+j+j+j+j
+Defining defrule: situation-4-remaining-packages-delivered-at-destination =j=j+j+j+j+j+j
+Defining defrule: Modification-Of-Truck-To-Make-It-Idle-When-No-Package +j+j+j
+Defining defrule: assignment-to-queue-of-an-arriving-package =j=j+j+j
+Defining defrule: Truck_Report_Header +j+j+j+j
+Defining defrule: Information-Statistics +j+j+j+j+j+j+j
+Defining defrule: Package_Report_Header +j+j+j
+Defining defrule: Package_updates =j+j+j+j+j
+Defining defrule: Package_Report =j+j+j+j+j+j+j+j+j+j+j+j
+Defining defrule: PACKAGE-AVERAGE-REPORT =j=j=j+j+j+j+j+j+j
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+TRUCK   7    ASSIGNED for PACKAGE     2   at time     1
+TRUCK   7   GOING for DELIVERY of PACKAGE   2
+TRUCK   1    ASSIGNED for PACKAGE     1   at time     1
+TRUCK   1   GOING for DELIVERY of PACKAGE   1
+TRUCK   10    ASSIGNED for PACKAGE     4   at time     3
+TRUCK   10   GOING for DELIVERY of PACKAGE   4
+TRUCK   3    ASSIGNED for PACKAGE     3   at time     3
+TRUCK   3   GOING for DELIVERY of PACKAGE   3
+TRUCK   1  DELIVERS PACKAGE   1
+TRUCK   7  DELIVERS PACKAGE   2
+TRUCK   8    ASSIGNED for PACKAGE     6   at time     4
+TRUCK   8   GOING for DELIVERY of PACKAGE   6
+TRUCK   6    ASSIGNED for PACKAGE     5   at time     4
+TRUCK   5    ASSIGNED for PACKAGE     7   at time     5
+TRUCK   5   GOING for DELIVERY of PACKAGE   7
+TRUCK   10  DELIVERS PACKAGE   4
+TRUCK   1    ASSIGNED for PACKAGE     8   at time     7
+TRUCK   6   GOING for DELIVERY of PACKAGE   5
+TRUCK   7    ASSIGNED for PACKAGE     11   at time     8
+TRUCK   7   GOING for DELIVERY of PACKAGE   11
+TRUCK   9    ASSIGNED for PACKAGE     10   at time     8
+TRUCK   9   GOING for DELIVERY of PACKAGE   10
+TRUCK   10    ASSIGNED for PACKAGE     9   at time     8
+TRUCK   10   GOING for DELIVERY of PACKAGE   9
+TRUCK   5  DELIVERS PACKAGE   7
+TRUCK   8  DELIVERS PACKAGE   6
+TRUCK   3  DELIVERS PACKAGE   3
+TRUCK   3    ASSIGNED for PACKAGE     14   at time     9
+TRUCK   2    ASSIGNED for PACKAGE     12   at time     9
+TRUCK   2   GOING for DELIVERY of PACKAGE   12
+TRUCK   7  DELIVERS PACKAGE   11
+TRUCK   8    ASSIGNED for PACKAGE     13   at time     9
+TRUCK   8   GOING for DELIVERY of PACKAGE   13
+TRUCK   1   GOING for DELIVERY of PACKAGE   8
+TRUCK   1  DELIVERS PACKAGE   8
+TRUCK   4    ASSIGNED for PACKAGE     15   at time     10
+TRUCK   4   GOING for DELIVERY of PACKAGE   15
+TRUCK   6  DELIVERS PACKAGE   5
+TRUCK   5    ASSIGNED for PACKAGE     16   at time     11
+TRUCK   5   GOING for DELIVERY of PACKAGE   16
+TRUCK   7    ASSIGNED for PACKAGE     17   at time     12
+TRUCK   7   GOING for DELIVERY of PACKAGE   17
+TRUCK   3   GOING for DELIVERY of PACKAGE   14
+TRUCK   5  DELIVERS PACKAGE   16
+TRUCK   10  DELIVERS PACKAGE   9
+TRUCK   9  DELIVERS PACKAGE   10
+TRUCK   6    ASSIGNED for PACKAGE     18   at time     13
+TRUCK   6   GOING for DELIVERY of PACKAGE   18
+TRUCK   5    ASSIGNED for PACKAGE     19   at time     13
+TRUCK   5   GOING for DELIVERY of PACKAGE   19
+TRUCK   3  DELIVERS PACKAGE   14
+TRUCK   8  DELIVERS PACKAGE   13
+TRUCK   10    ASSIGNED for PACKAGE     20   at time     14
+TRUCK   9    ASSIGNED for PACKAGE     21   at time     14
+TRUCK   9   GOING for DELIVERY of PACKAGE   21
+TRUCK   6  DELIVERS PACKAGE   18
+TRUCK   2  DELIVERS PACKAGE   12
+TRUCK   3    ASSIGNED for PACKAGE     22   at time     15
+TRUCK   3   GOING for DELIVERY of PACKAGE   22
+TRUCK   10   GOING for DELIVERY of PACKAGE   20
+TRUCK   5  DELIVERS PACKAGE   19
+TRUCK   7  DELIVERS PACKAGE   17
+TRUCK   8    ASSIGNED for PACKAGE     23   at time     20
+TRUCK   8   GOING for DELIVERY of PACKAGE   23
+TRUCK   10  DELIVERS PACKAGE   20
+TRUCK   3  DELIVERS PACKAGE   22
+TRUCK   4  DELIVERS PACKAGE   15
+TRUCK   6    ASSIGNED for PACKAGE     24   at time     22
+TRUCK   6   GOING for DELIVERY of PACKAGE   24
+TRUCK   7    ASSIGNED for PACKAGE     25   at time     23
+TRUCK   7   GOING for DELIVERY of PACKAGE   25
+TRUCK   10    ASSIGNED for PACKAGE     26   at time     25
+TRUCK   10   GOING for DELIVERY of PACKAGE   26
+TRUCK   5    ASSIGNED for PACKAGE     27   at time     27
+TRUCK   2    ASSIGNED for PACKAGE     28   at time     28
+TRUCK   2   GOING for DELIVERY of PACKAGE   28
+TRUCK   10  DELIVERS PACKAGE   26
+TRUCK   7  DELIVERS PACKAGE   25
+TRUCK   8  DELIVERS PACKAGE   23
+TRUCK   9  DELIVERS PACKAGE   21
+TRUCK   10    ASSIGNED for PACKAGE     29   at time     30
+TRUCK   5   GOING for DELIVERY of PACKAGE   27
+TRUCK   4    ASSIGNED for PACKAGE     30   at time     35
+TRUCK   4   GOING for DELIVERY of PACKAGE   30
+TRUCK   10   GOING for DELIVERY of PACKAGE   29
+TRUCK   5  DELIVERS PACKAGE   27
+TRUCK   2  DELIVERS PACKAGE   28
+TRUCK   6  DELIVERS PACKAGE   24
+TRUCK   3    ASSIGNED for PACKAGE     31   at time     37
+TRUCK   3   GOING for DELIVERY of PACKAGE   31
+TRUCK   10  DELIVERS PACKAGE   29
+TRUCK   4  DELIVERS PACKAGE   30
+TRUCK   7    ASSIGNED for PACKAGE     32   at time     38
+TRUCK   7   GOING for DELIVERY of PACKAGE   32
+TRUCK   1    ASSIGNED for PACKAGE     33   at time     40
+TRUCK   7  DELIVERS PACKAGE   32
+TRUCK   3  DELIVERS PACKAGE   31
+TRUCK   9    ASSIGNED for PACKAGE     34   at time     43
+TRUCK   9   GOING for DELIVERY of PACKAGE   34
+TRUCK   9  DELIVERS PACKAGE   34
+TRUCK   8    ASSIGNED for PACKAGE     35   at time     45
+TRUCK   8   GOING for DELIVERY of PACKAGE   35
+TRUCK   1   GOING for DELIVERY of PACKAGE   33
+TRUCK   5    ASSIGNED for PACKAGE     36   at time     47
+TRUCK   5   GOING for DELIVERY of PACKAGE   36
+TRUCK   5  DELIVERS PACKAGE   36
+TRUCK   1  DELIVERS PACKAGE   33
+TRUCK   6    ASSIGNED for PACKAGE     37   at time     50
+TRUCK   6   GOING for DELIVERY of PACKAGE   37
+TRUCK   6  DELIVERS PACKAGE   37
+TRUCK   4    ASSIGNED for PACKAGE     38   at time     52
+TRUCK   4   GOING for DELIVERY of PACKAGE   38
+TRUCK   10    ASSIGNED for PACKAGE     39   at time     55
+TRUCK   8  DELIVERS PACKAGE   35
+TRUCK   7    ASSIGNED for PACKAGE     40   at time     60
+TRUCK   4  DELIVERS PACKAGE   38
+TRUCK   9    ASSIGNED for PACKAGE     41   at time     62
+TRUCK   9   GOING for DELIVERY of PACKAGE   41
+TRUCK   7   GOING for DELIVERY of PACKAGE   40
+TRUCK   10   GOING for DELIVERY of PACKAGE   39
+TRUCK   3    ASSIGNED for PACKAGE     42   at time     65
+TRUCK   3   GOING for DELIVERY of PACKAGE   42
+TRUCK   10  DELIVERS PACKAGE   39
+TRUCK   7  DELIVERS PACKAGE   40
+TRUCK   5    ASSIGNED for PACKAGE     43   at time     67
+TRUCK   5   GOING for DELIVERY of PACKAGE   43
+TRUCK   5  DELIVERS PACKAGE   43
+TRUCK   3  DELIVERS PACKAGE   42
+TRUCK   6    ASSIGNED for PACKAGE     44   at time     70
+TRUCK   6   GOING for DELIVERY of PACKAGE   44
+TRUCK   9  DELIVERS PACKAGE   41
+TRUCK   8    ASSIGNED for PACKAGE     45   at time     75
+TRUCK   8   GOING for DELIVERY of PACKAGE   45
+TRUCK   7    ASSIGNED for PACKAGE     46   at time     77
+TRUCK   7   GOING for DELIVERY of PACKAGE   46
+TRUCK   4    ASSIGNED for PACKAGE     47   at time     80
+TRUCK   10    ASSIGNED for PACKAGE     48   at time     80
+TRUCK   4   GOING for DELIVERY of PACKAGE   47
+TRUCK   6  DELIVERS PACKAGE   44
+TRUCK   5    ASSIGNED for PACKAGE     49   at time     81
+TRUCK   5   GOING for DELIVERY of PACKAGE   49
+TRUCK   4  DELIVERS PACKAGE   47
+TRUCK   9    ASSIGNED for PACKAGE     50   at time     82
+TRUCK   9   GOING for DELIVERY of PACKAGE   50
+TRUCK   10   GOING for DELIVERY of PACKAGE   48
+TRUCK   10   DELIVERS PACKAGE   48
+TRUCK   9   DELIVERS PACKAGE   50
+TRUCK   5   DELIVERS PACKAGE   49
+TRUCK   7   DELIVERS PACKAGE   46
+TRUCK   8   DELIVERS PACKAGE   45
+Execution End
+Execution End
+Execution End
+Execution End
+Execution End
+Execution End
+Execution End
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                         INDIVIDUAL  TRUCK REPORT                                                                                                       
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ TRUCK#  |	Wait Time | Total Time Busy |  Busy Time(%)  | #Packages Carrying | Avg % Occupancy | Non Delivery Travel Time | Non Del Time(%)	| Delivery Travel Time | Delivery Time (%)	| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    1       40             17             17.35               3                     80.00               8                   15.09               9                     16.98               
+    2       26             19             19.39               2                     90.00               6                   14.63               13                    31.71               
+    3       48             47             47.96               5                     62.00               15                  16.48               32                    35.16               
+    4       62             39             39.80               4                     65.00               17                  17.53               22                    22.68               
+    5       67             41             41.84               7                     78.57               14                  13.46               27                    25.96               
+    6       54             46             46.94               5                     60.00               20                  20.83               26                    27.08               
+    7       57             63             64.29               7                     71.43               26                  22.41               37                    31.90               
+    8       50             54             55.10               5                     50.67               26                  26.00               28                    28.00               
+    9       54             73             74.49               5                     56.00               31                  25.20               42                    34.15               
+    10      51             72             73.47               7                     50.00               26                  21.85               46                    38.66               
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                  INDIVIDUAL PACKAGE REPORT                                                       
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  PACKAGE#  |  Arrival Time  |  Pick Up Time  |  Total Wait Time | Picked By |  Delivery Time  | Status At Delivery  | Delivery Delayed By |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    1                 1                 1                  0              1              4                 ON-TIME               0           		
+    2                 1                 1                  0              7              3                 ON-TIME               0           		
+    3                 3                 5                  2              3              10                ON-TIME               0           		
+    4                 3                 3                  0              10             12                ON-TIME               0           		
+    5                 4                 7                  3              6              10                ON-TIME               0           		
+    6                 4                 4                  0              8              7                 ON-TIME               0           		
+    7                 5                 5                  0              5              13                LATE                  1           		
+    8                 7                 9                  2              1              9                 ON-TIME               0           		
+    9                 8                 11                 3              10             17                ON-TIME               0           		
+    10                8                 11                 3              9              20                LATE                  5           		
+    11                8                 8                  0              7              14                ON-TIME               0           		
+    12                9                 12                 3              2              20                ON-TIME               0           		
+    13                9                 11                 2              8              19                ON-TIME               0           		
+    14                9                 12                 3              3              14                ON-TIME               0           		
+    15                10                19                 9              4              25                LATE                  5           		
+    16                11                12                 1              5              14                ON-TIME               0           		
+    17                12                18                 6              7              24                LATE                  4           		
+    18                13                13                 0              6              18                ON-TIME               0           		
+    19                13                15                 2              5              18                ON-TIME               0           		
+    20                14                18                 4              10             21                LATE                  1           		
+    21                14                26                 12             9              34                LATE                  9           		
+    22                15                21                 6              3              30                ON-TIME               0           		
+    23                20                29                 9              8              32                LATE                  7           		
+    24                22                30                 8              6              33                LATE                  1           		
+    25                23                27                 4              7              32                ON-TIME               0           		
+    26                25                26                 1              10             35                ON-TIME               0           		
+    27                27                31                 4              5              32                ON-TIME               0           		
+    28                28                31                 3              2              36                ON-TIME               0           		
+    29                30                35                 5              10             38                ON-TIME               0           		
+    30                35                36                 1              4              39                ON-TIME               0           		
+    31                37                40                 3              3              46                ON-TIME               0           		
+    32                38                40                 2              7              46                ON-TIME               0           		
+    33                40                46                 6              1              49                LATE                  4           		
+    34                43                43                 0              9              48                ON-TIME               0           		
+    35                45                54                 9              8              60                LATE                  5           		
+    36                47                49                 2              5              51                ON-TIME               0           		
+    37                50                51                 1              6              55                ON-TIME               0           		
+    38                52                59                 7              4              68                ON-TIME               0           		
+    39                55                63                 8              10             65                LATE                  5           		
+    40                60                62                 2              7              64                ON-TIME               0           		
+    41                62                70                 8              9              82                ON-TIME               0           		
+    42                65                66                 1              3              74                ON-TIME               0           		
+    43                67                68                 1              5              72                ON-TIME               0           		
+    44                70                78                 8              6              86                LATE                  6           		
+    45                75                81                 6              8              83                ON-TIME               0           		
+    46                77                89                 12             7              92                LATE                  13          		
+    47                80                80                 0              4              82                ON-TIME               0           		
+    48                80                85                 5              10             88                ON-TIME               0           		
+    49                81                85                 4              5              87                LATE                  3           		
+    50                82                90                 8              9              93                LATE                  8           		
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         AVERAGE-PACKAGE-REPORT    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1. AVERAGE WAIT TIME FOR PACKAGES 			:		3.78                
+ 2. # Packages which have been delivered ON-TIME 	:		35                   
+ 3. # Packages which have been delivered LATE 		:		15                  	
+ 4. AVERAGE lateness for LATE packages		:		5.13                	
+ 5. AVERAGE lateness for ALL packages 		:		1.54                	
+
+CLIPS> (dribble-off)
